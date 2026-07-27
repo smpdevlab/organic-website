@@ -1417,6 +1417,197 @@ ABOUT CTA
 
 
 
+/*=====================================
+PRODUCTS HERO
+======================================*/
+
+.products-hero{
+
+    padding:140px 0 90px;
+
+    background:#faf9f4;
+}
+
+.products-hero-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1.1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.products-hero-content{
+
+    max-width:520px;
+}
+
+.products-hero-content h1{
+
+    margin:18px 0;
+
+    font-size:clamp(2.2rem,4.1vw,3.5rem);
+
+    line-height:1.2;
+
+    color:#235b38;
+}
+
+.products-hero-content p{
+
+    margin-top:30px;
+
+    line-height:1.9;
+
+    color:#5b5b5b;
+}
+
+.products-hero-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    box-shadow:0 30px 60px rgba(0,0,0,.12);
+}
+
+
+/*=====================================
+PRODUCTS INTRO
+======================================*/
+
+.products-intro{
+
+    padding:90px 0;
+
+    background:#ffffff;
+}
+
+.products-intro-content{
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.products-intro-content h2{
+
+    margin:18px 0;
+
+    font-size:clamp(2rem,3.8vw,3.1rem);
+
+    color:#235b38;
+}
+
+.products-intro .section-divider{
+
+    margin:28px auto;
+}
+
+.products-intro-content p{
+
+    line-height:1.9;
+
+    color:#5b5b5b;
+}
+
+
+/*=====================================
+PRODUCTS CATEGORY
+======================================*/
+
+.product-category{
+
+    padding:90px 0;
+
+    background:#faf9f4;
+}
+
+.category-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.category-image img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:20px;
+
+    box-shadow:0 25px 55px rgba(0,0,0,.10);
+}
+
+.category-content h2{
+
+    margin:18px 0;
+
+    font-size:clamp(2rem,3.6vw,3rem);
+
+    color:#235b38;
+}
+
+.category-content p{
+
+    margin:30px 0;
+
+    line-height:1.9;
+
+    color:#5b5b5b;
+}
+
+
+.product-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-top:35px;
+}
+
+.product-list span{
+
+    padding:10px 18px;
+
+    background:#ffffff;
+
+    border:1px solid #d9d9d9;
+
+    border-radius:40px;
+
+    color:#235b38;
+
+    font-weight:500;
+
+    transition:.3s ease;
+}
+
+.product-list span:hover{
+
+    background:#235b38;
+
+    color:#ffffff;
+
+    border-color:#235b38;
+}
+
+
 
 /***********append here above, end of Desktop justmark***********/
 
@@ -1880,6 +2071,39 @@ Mobile
     }
 
 /******  end of ABOUT -CTA mobile **********/ 
+
+/********PRODUCTS mobile *************/
+
+ .products-hero{
+
+        padding:120px 0 70px;
+    }
+
+    .products-hero-grid,
+
+    .category-grid{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+    }
+
+    .products-intro{
+
+        padding:70px 0;
+    }
+
+    .product-category{
+
+        padding:70px 0;
+    }
+
+    .products-intro-content{
+
+        text-align:center;
+    }
+
+ /********* end of PRODUCTS ***********/   
 
 } /******************** END OF mobile *************************/
 
