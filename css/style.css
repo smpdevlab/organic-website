@@ -1475,102 +1475,263 @@ PRODUCTS HERO
     box-shadow:0 30px 60px rgba(0,0,0,.12);
 }
 
-
 /*=====================================
-PRODUCTS INTRO
+PRODUCTS BANNER
 ======================================*/
 
-.products-intro{
+.products-banner{
 
-    padding:90px 0;
+    margin-top:82px;
+
+    max-height:280px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-top: 55px;
+    padding-bottom: 25px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(250,249,244,.96) 0%,
+        rgba(250,249,244,.92) 28%,
+        rgba(250,249,244,.70) 45%,
+        rgba(250,249,244,.15) 62%,
+        rgba(250,249,244,0) 100%
+    ),
+    url("../images/products/products-banner.png"); 
+   
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+}
+
+.products-banner-content{
+
+    max-width:520px;
+}
+
+.products-banner-content h1{
+
+    /*margin:18px 0 22px;*/
+    margin:14px 0 16px;
+
+    /*font-size:clamp(2.5rem,4vw,4rem);*/
+    font-size: clamp(1.6rem,2.2vw,2.8rem);
+
+    line-height:1.15;
+
+    color:#235b38;
+}
+
+.products-banner-content p{
+
+    font-size:1.08rem;
+
+    line-height:1.8;
+
+    color:#4f4f4f;
+
+    /*max-width:420px;*/
+    max-width:360px;
+}
+
+
+/*=====================================
+PRODUCT CATALOGUE
+======================================*/
+
+.product-catalog{
+
+    padding:60px 0 70px;
 
     background:#ffffff;
 }
 
-.products-intro-content{
+.catalog-header{
 
-    max-width:760px;
-
-    margin:auto;
-
-    text-align:center;
+    margin-bottom:35px;
 }
 
-.products-intro-content h2{
+.catalog-header h2{
 
-    margin:18px 0;
-
-    font-size:clamp(2rem,3.8vw,3.1rem);
+    /*font-size:clamp(2rem,3vw,2.8rem); */
+    font-size: clamp(1.2rem,1.8vw,1.8rem);
 
     color:#235b38;
+
+    margin-bottom:10px;
 }
 
-.products-intro .section-divider{
+.catalog-header p{
 
-    margin:28px auto;
+    color:#666;
+
+    font-size:1.05rem;
 }
-
-.products-intro-content p{
-
-    line-height:1.9;
-
-    color:#5b5b5b;
-}
-
 
 /*=====================================
-PRODUCTS CATEGORY
+GRID
 ======================================*/
 
-.product-category{
-
-    padding:90px 0;
-
-    background:#faf9f4;
-}
-
-.category-grid{
+.catalog-grid{
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(4,1fr);
 
-    gap:70px;
+    gap:18px;
+}
+Catalogue Cards
+.catalog-item{
+
+    display:flex;
 
     align-items:center;
+
+    gap:14px;
+
+    padding:18px 20px;
+
+    border:1px solid #e2e2e2;
+
+    border-radius:14px;
+
+    background:#ffffff;
+
+    cursor:pointer;
+
+    transition:.25s ease;
 }
 
-.category-image img{
+.catalog-item:hover{
 
-    width:100%;
+    border-color:#235b38;
 
-    display:block;
+    box-shadow:0 10px 24px rgba(0,0,0,.08);
 
-    border-radius:20px;
-
-    box-shadow:0 25px 55px rgba(0,0,0,.10);
+    transform:translateY(-2px);
 }
 
-.category-content h2{
+.catalog-item input{
 
-    margin:18px 0;
+    width:18px;
 
-    font-size:clamp(2rem,3.6vw,3rem);
+    height:18px;
+
+    accent-color:#235b38;
+
+    cursor:pointer;
+}
+
+.catalog-item span{
+
+    font-weight:500;
 
     color:#235b38;
 }
 
-.category-content p{
+/*=====================================
+end of PRODUCT CATALOGUE
+======================================*/
 
-    margin:30px 0;
 
-    line-height:1.9;
+/*=====================================
+CATALOGUE CARDS
+======================================*/
 
-    color:#5b5b5b;
+.catalog-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 20px;
+
+    border:1px solid #e2e2e2;
+
+    border-radius:14px;
+
+    background:#ffffff;
+
+    cursor:pointer;
+
+    transition:.25s ease;
 }
 
+.catalog-item:hover{
 
-.product-list{
+    border-color:#235b38;
+
+    box-shadow:0 10px 24px rgba(0,0,0,.08);
+
+    transform:translateY(-2px);
+}
+
+.catalog-item input{
+
+    width:18px;
+
+    height:18px;
+
+    accent-color:#235b38;
+
+    cursor:pointer;
+}
+
+.catalog-item span{
+
+    font-weight:500;
+
+    color:#235b38;
+}
+
+/*=====================================
+end of CATALOGUE CARDS
+======================================*/
+
+/*=====================================
+SELECTED PRODUCTS
+======================================*/
+
+.selected-products{
+
+    padding:70px 0;
+
+    background:#faf9f4;
+
+    border-top:1px solid #ececec;
+}
+
+.selected-header{
+
+    margin-bottom:35px;
+}
+
+.selected-header h2{
+
+    color:#235b38;
+
+    font-size:clamp(2rem,3vw,2.8rem);
+
+    margin-bottom:12px;
+}
+
+.selected-header p{
+
+    color:#666;
+}
+
+.selected-tags{
 
     display:flex;
 
@@ -1578,34 +1739,65 @@ PRODUCTS CATEGORY
 
     gap:14px;
 
-    margin-top:35px;
+    min-height:70px;
 }
 
-.product-list span{
+.empty-selection{
 
-    padding:10px 18px;
+    color:#888;
+
+    font-style:italic;
+}
+
+.selected-tag{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 18px;
 
     background:#ffffff;
 
     border:1px solid #d9d9d9;
 
-    border-radius:40px;
+    border-radius:30px;
 
     color:#235b38;
 
     font-weight:500;
-
-    transition:.3s ease;
 }
 
-.product-list span:hover{
+.selected-tag button{
 
-    background:#235b38;
+    border:none;
 
-    color:#ffffff;
+    background:none;
 
-    border-color:#235b38;
+    color:#888;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    line-height:1;
 }
+
+.selected-tag button:hover{
+
+    color:#d63b3b;
+}
+
+.selected-actions{
+
+    margin-top:45px;
+}
+
+/*=====================================
+end of SELECTED PRODUCTS
+======================================*/
 
 
 
@@ -2072,38 +2264,116 @@ Mobile
 
 /******  end of ABOUT -CTA mobile **********/ 
 
-/********PRODUCTS mobile *************/
+/********PRODUCTS-banner mobile *************/
 
- .products-hero{
 
-        padding:120px 0 70px;
+
+  .products-banner{
+
+        max-height:280px;
+
+        
+
+        background-position:68% center;
+
+        padding-top: 80px;
+        padding-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
 
-    .products-hero-grid,
+    .products-banner-content{
 
-    .category-grid{
-
-        grid-template-columns:1fr;
-
-        gap:45px;
+        max-width:100%;
     }
 
-    .products-intro{
+    .products-banner-content h1{
 
-        padding:70px 0;
+        font-size:clamp(2rem,8vw,2.8rem);
     }
 
-    .product-category{
+    .products-banner-content p{
 
-        padding:70px 0;
+        font-size:1rem;
     }
 
-    .products-intro-content{
+    /*.products-banner {
+        background:linear-gradient(90deg,
+    rgba(250,249,244,.96) 0%,
+    rgba(250,249,244,.94) 35%,
+    rgba(250,249,244,.82) 52%,
+    rgba(250,249,244,.45) 68%,
+    rgba(250,249,244,.10) 82%,
+    rgba(250,249,244,0) 100%),
+    url("../images/products/products-banner.png");
+    } */
 
-        text-align:center;
+     .products-banner-content p{
+
+        display:none;
     }
 
- /********* end of PRODUCTS ***********/   
+     .products-banner-content h1 {
+    font-size: clamp(0.5rem,6vw,1.8rem);
+  }
+
+
+ /********* end of PRODUCTS-banner ***********/   
+
+
+/******** PRODUCT CATALOG *******/
+
+
+    .catalog-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:14px;
+    }
+
+    .catalog-item{
+
+        padding:16px;
+    }
+
+    .catalog-header h2{
+
+    /*font-size:clamp(2rem,3vw,2.8rem); */
+    font-size: clamp(1.16rem,2vw,2rem);
+    margin-top: -40px;
+    }
+
+/********end of PRODUCT CATALOG ************/
+
+
+
+
+/*=====================================
+SELECTED PRODUCTS mobile
+======================================*/
+
+ .selected-products{
+
+        padding:60px 0;
+    }
+
+    .selected-actions{
+
+        margin-top:35px;
+    }
+
+    .selected-actions .btn-primary{
+
+        width:100%;
+    }
+
+
+/*=====================================
+end of SELECTED PRODUCTS mobile
+======================================*/
+
+
+
 
 } /******************** END OF mobile *************************/
 

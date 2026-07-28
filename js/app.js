@@ -101,3 +101,23 @@ document.querySelectorAll("section").forEach((section) => {
     observer.observe(section);
 
 });
+
+
+
+/******************************************/
+
+/*=====================================
+PRODUCT SELECTION
+=====================================*/
+
+const productCheckboxes = document.querySelectorAll(
+    '.catalog-item input[type="checkbox"]'
+);
+
+const selectedProductsList = document.getElementById(
+    'selected-products-list'
+);
+
+const selectedCount = document.getElementById(
+    'selected-count'
+);
