@@ -1717,7 +1717,7 @@ SELECTED PRODUCTS
     margin-bottom:35px;
 }
 
-.selected-header h2{
+/*.selected-header h2{
 
     color:#235b38;
 
@@ -1725,11 +1725,23 @@ SELECTED PRODUCTS
 
     margin-bottom:12px;
 }
+*/
 
-.selected-header p{
-
-    color:#666;
+.selected-header h2 {
+	color: #235b38;
+	font-size: clamp(1.2rem,1.8vw,1.8rem);
+	margin-bottom: 6px;
 }
+
+
+
+.selected-header p {
+	color: #666;
+	font-weight: bold;
+	font-variant-caps: unicase;
+}
+
+
 
 .selected-tags{
 
@@ -1798,6 +1810,53 @@ SELECTED PRODUCTS
 /*=====================================
 end of SELECTED PRODUCTS
 ======================================*/
+
+
+
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:opacity 0.8s ease, transform 0.8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/*************SELECT PRODUCT *****************/
+
+.remove-tag{
+
+    background:none;
+
+    border:none;
+
+    color:inherit;
+
+    font-size:1rem;
+
+    margin-left:8px;
+
+    cursor:pointer;
+
+    line-height:1;
+
+}
+
+
+/*************end of SELECT PRODUCT *****************/
+
 
 
 

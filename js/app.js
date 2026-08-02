@@ -1,3 +1,5 @@
+
+
 /* ===================================================
    MOBILE MENU
 =================================================== */
@@ -57,13 +59,17 @@ window.addEventListener("scroll", () => {
 
 const enquiryForm = document.querySelector(".enquiry-card form");
 
-enquiryForm.addEventListener("submit", function (e) {
+if (enquiryForm) {
 
-    e.preventDefault();
+    enquiryForm.addEventListener("submit", function (e) {
 
-    alert("Thank you! We'll connect with you shortly.");
+        e.preventDefault();
 
-});
+        alert("Thank you! We'll connect with you shortly.");
+
+    });
+
+}
 
 
 /* ===================================================
@@ -77,8 +83,9 @@ const observer = new IntersectionObserver(
         entries.forEach((entry) => {
 
             if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
+                
+              /*  alert('intersectionObserver works! \n'+entry.target.className +' became visible!'); */
+                entry.target.classList.add("show"); 
 
             }
 
@@ -94,14 +101,17 @@ const observer = new IntersectionObserver(
 
 );
 
-document.querySelectorAll("section").forEach((section) => {
+const sections = document.querySelectorAll("section");
+
+/* alert("Sections found: " + sections.length); */
+
+sections.forEach((section) => {
 
     section.classList.add("hidden");
 
     observer.observe(section);
 
 });
-
 
 
 /******************************************/
@@ -121,3 +131,88 @@ const selectedProductsList = document.getElementById(
 const selectedCount = document.getElementById(
     'selected-count'
 );
+
+
+
+productCheckboxes.forEach((checkbox) => {
+
+    checkbox.addEventListener("change", () => {
+
+        const selectedProducts = [];
+
+        productCheckboxes.forEach((product) => {
+
+            if (product.checked) {
+
+                selectedProducts.push(product.value);
+
+            }
+
+        });
+
+        
+        selectedProductsList.innerHTML = "";
+
+        if (selectedProducts.length === 0) {
+
+                selectedProductsList.innerHTML =
+                '<p class="empty-selection">No products selected yet.</p>';
+
+        } else {
+
+                selectedProducts.forEach((product) => {
+
+               const tag = document.createElement("span");
+
+                tag.className = "selected-tag";
+
+                tag.innerHTML = `
+                ${product}
+                <button
+                    type="button"
+                    class="remove-tag"
+                    data-product="${product}">
+                    &times;
+                </button>
+                `;
+
+        selectedProductsList.appendChild(tag);
+
+    });
+
+    }
+
+        selectedCount.textContent = selectedProducts.length;
+
+        /***********REMOVE TAG  that unchecks product-checkboxes and thus triggers the change event-listener and  it's callback********** */
+
+            const removeButtons = document.querySelectorAll(".remove-tag");
+
+            removeButtons.forEach((button) => {
+
+            button.addEventListener("click", () => {
+
+            const productToRemove = button.dataset.product;
+
+            productCheckboxes.forEach((checkbox) => {
+
+                 if (checkbox.value === productToRemove) {
+
+                        checkbox.checked = false;
+
+                        checkbox.dispatchEvent(new Event("change"));
+
+                }
+
+        });
+
+    });
+
+});
+
+         /**********end of *REMOVE TAG  that unchecks product-checkboxes and thus triggers the change event-listener and  it's callback********** */
+
+
+    });
+
+});
