@@ -134,39 +134,40 @@ const selectedCount = document.getElementById(
 
 
 
-productCheckboxes.forEach((checkbox) => {
+/*=====================================
+RENDER SELECTED PRODUCTS
+=====================================*/
 
-    checkbox.addEventListener("change", () => {
+function updateSelectedProducts() {
 
-        const selectedProducts = [];
+    const selectedProducts = [];
 
-        productCheckboxes.forEach((product) => {
+    productCheckboxes.forEach((product) => {
 
-            if (product.checked) {
+        if (product.checked) {
 
-                selectedProducts.push(product.value);
+            selectedProducts.push(product.value);
 
-            }
+        }
 
-        });
+    });
 
-        
-        selectedProductsList.innerHTML = "";
+    selectedProductsList.innerHTML = "";
 
-        if (selectedProducts.length === 0) {
+    if (selectedProducts.length === 0) {
 
-                selectedProductsList.innerHTML =
-                '<p class="empty-selection">No products selected yet.</p>';
+        selectedProductsList.innerHTML =
+            '<p class="empty-selection">No products selected yet.</p>';
 
-        } else {
+    } else {
 
-                selectedProducts.forEach((product) => {
+        selectedProducts.forEach((product) => {
 
-               const tag = document.createElement("span");
+            const tag = document.createElement("span");
 
-                tag.className = "selected-tag";
+            tag.className = "selected-tag";
 
-                tag.innerHTML = `
+            tag.innerHTML = `
                 ${product}
                 <button
                     type="button"
@@ -174,45 +175,63 @@ productCheckboxes.forEach((checkbox) => {
                     data-product="${product}">
                     &times;
                 </button>
-                `;
+            `;
 
-        selectedProductsList.appendChild(tag);
+            selectedProductsList.appendChild(tag);
 
-    });
+        });
 
     }
 
-        selectedCount.textContent = selectedProducts.length;
+    selectedCount.textContent = selectedProducts.length;
 
-        /***********REMOVE TAG  that unchecks product-checkboxes and thus triggers the change event-listener and  it's callback********** */
+    const removeButtons = document.querySelectorAll(".remove-tag");
 
-            const removeButtons = document.querySelectorAll(".remove-tag");
+    removeButtons.forEach((button) => {
 
-            removeButtons.forEach((button) => {
-
-            button.addEventListener("click", () => {
+        button.addEventListener("click", () => {
 
             const productToRemove = button.dataset.product;
 
             productCheckboxes.forEach((checkbox) => {
 
-                 if (checkbox.value === productToRemove) {
+                if (checkbox.value === productToRemove) {
 
-                        checkbox.checked = false;
+                    checkbox.checked = false;
 
-                        checkbox.dispatchEvent(new Event("change"));
+                    checkbox.dispatchEvent(new Event("change"));
 
                 }
+
+            });
 
         });
 
     });
 
-});
+}/*****end of function */
 
-         /**********end of *REMOVE TAG  that unchecks product-checkboxes and thus triggers the change event-listener and  it's callback********** */
 
+/*=====================================
+end of RENDER SELECTED PRODUCTS
+=====================================*/
+
+
+
+/*=============================================================== */
+
+productCheckboxes.forEach((checkbox) => {
+
+    checkbox.addEventListener("change", () => {
+
+        updateSelectedProducts();
 
     });
 
 });
+
+updateSelectedProducts();
+
+
+
+/*=============================================================== */

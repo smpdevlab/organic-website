@@ -2437,6 +2437,113 @@ end of SELECTED PRODUCTS mobile
 } /******************** END OF mobile *************************/
 
 
+
+/*=====================================
+ENQUIRY FORM
+=====================================*/
+
+.enquiry-section {
+
+    margin-top: 80px;
+
+}
+
+.enquiry-form {
+
+    max-width: 700px;
+
+    margin-top: 35px;
+
+}
+
+.form-group {
+
+    margin-bottom: 28px;
+
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    color: #2f2f2f;
+
+}
+
+.form-group label span {
+
+    color: #d9534f;
+
+}
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    font-size: 1rem;
+
+    font-family: inherit;
+
+    color: #333;
+
+    background: #fff;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 10px;
+
+    transition: all .25s ease;
+
+    box-sizing: border-box;
+
+}
+
+.form-group textarea {
+
+    min-height: 140px;
+
+    resize: vertical;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    outline: none;
+
+    border-color: #2e6b45;
+
+    box-shadow: 0 0 0 3px rgba(46,107,69,.12);
+
+}
+
+.enquiry-form .btn-primary {
+
+    margin-top: 10px;
+
+    min-width: 220px;
+
+}
+
+
+
+
+/*=====================================
+end of ENQUIRY FORM
+=====================================*/
+
+
+
+
 /* ===================================================
    DESKTOP
 =================================================== */
@@ -2505,6 +2612,103 @@ end of SELECTED PRODUCTS mobile
     font-size:2.2rem;
 
     line-height:1.12;
+
+}
+
+
+/*=====================================
+ENQUIRY FORM
+=====================================*/
+
+.enquiry-section {
+
+    margin-top: 80px;
+
+}
+
+.enquiry-form {
+
+    max-width: 700px;
+
+    margin-top: 35px;
+
+}
+
+.form-group {
+
+    margin-bottom: 28px;
+
+}
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    color: #2f2f2f;
+
+}
+
+.form-group label span {
+
+    color: #d9534f;
+
+}
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    font-size: 1rem;
+
+    font-family: inherit;
+
+    color: #333;
+
+    background: #fff;
+
+    border: 1px solid #d8d8d8;
+
+    border-radius: 10px;
+
+    transition: all .25s ease;
+
+    box-sizing: border-box;
+
+}
+
+.form-group textarea {
+
+    min-height: 140px;
+
+    resize: vertical;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    outline: none;
+
+    border-color: #2e6b45;
+
+    box-shadow: 0 0 0 3px rgba(46,107,69,.12);
+
+}
+
+.enquiry-form .btn-primary {
+
+    margin-top: 10px;
+
+    min-width: 220px;
 
 }
 
