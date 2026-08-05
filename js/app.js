@@ -132,6 +132,9 @@ const selectedCount = document.getElementById(
     'selected-count'
 );
 
+const selectedProductsInput = document.getElementById(
+    "selected-products-input"
+);
 
 
 /*=====================================
@@ -184,6 +187,9 @@ function updateSelectedProducts() {
     }
 
     selectedCount.textContent = selectedProducts.length;
+
+    selectedProductsInput.value 
+               = selectedProducts.length > 0 ? selectedProducts.join(", ") : "None specified";
 
     const removeButtons = document.querySelectorAll(".remove-tag");
 

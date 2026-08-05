@@ -2540,6 +2540,131 @@ ENQUIRY FORM
 /*=====================================
 end of ENQUIRY FORM
 =====================================*/
+/*=====================================
+THANK YOU PAGE
+=====================================*/
+
+.thank-you {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 80px 20px;
+
+     padding: 120px 20px;
+
+}
+
+.thank-you-card {
+
+    max-width: 650px;
+
+    text-align: center;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    padding: 60px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+
+    margin: 0 auto;
+
+}
+
+.success-icon {
+
+    width: 90px;
+
+    height: 90px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    background: #69c254;
+
+    color: #fff;
+
+    font-size: 3rem;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.thank-you-card h1 {
+
+    margin-bottom: 20px;
+
+}
+
+.thank-you-card p {
+
+    margin-bottom: 15px;
+
+    color: #666;
+
+    line-height: 1.7;
+
+}
+
+.thank-you-actions {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/*=====================================
+end of THANK YOU PAGE
+=====================================*/
+
+.btn-secondary {
+
+    display: inline-block;
+
+    padding: 15px 35px;
+
+    border-radius: 999px;
+
+    border: 2px solid #2e6b45;
+
+    color: #2e6b45;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-secondary:hover {
+
+    background: #2e6b45;
+
+    color: #fff;
+
+}
+
 
 
 
