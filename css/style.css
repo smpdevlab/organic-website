@@ -2536,6 +2536,23 @@ ENQUIRY FORM
 
 
 
+/************************/
+
+.error-message {
+
+    display: block;
+
+    margin-top: 6px;
+
+    color: #d93025;
+
+    font-size: .9rem;
+
+}
+
+
+
+
 
 /*=====================================
 end of ENQUIRY FORM
