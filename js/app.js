@@ -1,83 +1,3 @@
-/********************** ****************
- PRODUCT ENQUIRY FORM
-
-****************************************/
-const enquiryForm =
-    document.getElementById("enquiry-form");
-
-const nameInput =
-    document.getElementById("name");
-
-const phoneInput =
-    document.getElementById("phone");
-
-const nameError =
-    document.getElementById("name-error");
-
-const phoneError =
-    document.getElementById("phone-error");
-
-const phonePattern = /^[6-9]\d{9}$/;
-
-
-function validateEnquiryForm() {
-
-    nameError.textContent = "";
-
-    phoneError.textContent = "";
-
-    let isValid = true;
-
-    /*========================
-      FULL NAME
-    ========================*/
-
-    if (nameInput.value.trim() === "") {
-
-        nameError.textContent =
-            "Please enter your full name.";
-
-        isValid = false;
-
-    }
-
-    /*========================
-      PHONE
-    ========================*/
-
-    /* const phonePattern = /^[6-9]\d{9}$/; */
-
-    if (!phonePattern.test(phoneInput.value.trim())) {
-
-        phoneError.textContent =
-            "Please enter a valid mobile number.";
-
-        isValid = false;
-
-    }
-
-    return isValid;
-
-}
-
-
-
-
-enquiryForm.addEventListener("submit", (event) => {
-
-    if (!validateEnquiryForm()) {
-
-        event.preventDefault();
-
-    }
-
-});
-
-
-/********************** ****************
- end of PRODUCT ENQUIRY FORM
-
-****************************************/
 
 /* ===================================================
    MOBILE MENU
@@ -132,23 +52,9 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* ===================================================
-   ENQUIRY FORM
-=================================================== */
 
-const enquiryForm = document.querySelector(".enquiry-card form");
 
-if (enquiryForm) {
 
-    enquiryForm.addEventListener("submit", function (e) {
-
-        e.preventDefault();
-
-        alert("Thank you! We'll connect with you shortly.");
-
-    });
-
-}
 
 
 /* ===================================================
@@ -199,6 +105,8 @@ sections.forEach((section) => {
 PRODUCT SELECTION
 =====================================*/
 
+// DOM REFERENCES
+
 const productCheckboxes = document.querySelectorAll(
     '.catalog-item input[type="checkbox"]'
 );
@@ -219,6 +127,8 @@ const selectedProductsInput = document.getElementById(
 /*=====================================
 RENDER SELECTED PRODUCTS
 =====================================*/
+
+// FUNCTIONS
 
 function updateSelectedProducts() {
 
@@ -267,8 +177,10 @@ function updateSelectedProducts() {
 
     selectedCount.textContent = selectedProducts.length;
 
-    selectedProductsInput.value 
-               = selectedProducts.length > 0 ? selectedProducts.join(", ") : "None specified";
+    selectedProductsInput.value =
+    selectedProducts.length > 0
+        ? selectedProducts.join(", ")
+        : "None specified";
 
     const removeButtons = document.querySelectorAll(".remove-tag");
 
@@ -305,6 +217,8 @@ end of RENDER SELECTED PRODUCTS
 
 /*=============================================================== */
 
+// EVENT LISTENERS
+
 productCheckboxes.forEach((checkbox) => {
 
     checkbox.addEventListener("change", () => {
@@ -315,8 +229,93 @@ productCheckboxes.forEach((checkbox) => {
 
 });
 
-updateSelectedProducts();
+updateSelectedProducts(); // updates/rebuilds tags-list on F5-reFresh
 
 
 
 /*=============================================================== */
+
+
+/********************** ****************
+ PRODUCT ENQUIRY FORM
+
+****************************************/
+const enquiryForm =document.getElementById("enquiry-form");
+
+
+const nameInput =document.getElementById("name");
+
+const phoneInput =document.getElementById("phone");
+
+const nameError =document.getElementById("name-error");
+
+const phoneError =document.getElementById("phone-error");
+
+const phonePattern = /^[6-9]\d{9}$/;
+
+
+
+
+
+function validateEnquiryForm() {
+
+    nameError.textContent = "";
+
+    phoneError.textContent = "";
+
+    let isValid = true;
+
+    /*========================
+      FULL NAME
+    ========================*/
+
+    if (nameInput.value.trim() === "") {
+
+        nameError.textContent =
+            "Please enter your full name.";
+
+        isValid = false;
+
+    }
+
+    /*========================
+      PHONE
+    ========================*/
+
+    
+
+    if (!phonePattern.test(phoneInput.value.trim())) {
+
+        phoneError.textContent =
+            "Please enter a valid mobile number.";
+
+        isValid = false;
+
+    }
+
+    return isValid;
+
+} // end of validateEnquiryForm() function
+
+
+
+
+if (enquiryForm) {
+
+    enquiryForm.addEventListener("submit", (event) => {
+
+        if (!validateEnquiryForm()) {
+
+            event.preventDefault();
+
+        }
+
+    });
+
+}
+
+
+/********************** ****************
+ end of PRODUCT ENQUIRY FORM
+
+****************************************/
